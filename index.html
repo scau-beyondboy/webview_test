@@ -17,6 +17,7 @@
     </style>
     
     <script>
+    
         function goToBaidu() {
             window.location.href = "https://www.baidu.com";
         }
@@ -26,7 +27,14 @@
         }
 
         function callAndroidTest() {
-            KuCoin.getAppVersion();
+            const message = JSON.stringify({
+                type: "func",
+                params: {
+                    name: "setWebViewScrollBarVisible",
+                    enable: false
+                }
+            });
+            KuCoin.prompt(message);
         }
 
     </script>
