@@ -10,10 +10,22 @@
         function reloadPage() {
             location.reload();
         }
+
+        function callAndroidTest() {
+            KuCoin.getAppVersion();
+        }
+
     </script>
 </head>
 <body>
-    <button onclick="goToBaidu()">Go to Baidu</button>
-    <button onclick="reloadPage()">Reload Page</button>
+    <div>
+        <button onclick="goToBaidu()">Go to Baidu</button>
+    </div>
+    <div>
+        <button onclick="callAndroidTest()">Get App Version</button>
+    </div>
+    <div>
+        <button onclick="reloadPage()">Reload Page</button>
+    </div>
 </body>
 </html>
