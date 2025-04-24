@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>异步加载iframe</title>
+  <script>
+    function loadIframe() {
+      var iframe = document.getElementById('myIframe');
+      iframe.src = iframe.getAttribute('data-src');
+    }
+    setTimeout(loadIframe,500);
+    function dotest() {
+      console.log("test");
+    }
+    setTimeout(dotest, 1000);
+  </script>
+</head>
+<body>
+  <h1>主页面内容</h1>
+  <iframe id="myIframe" data-src="https://www.kucoin.com/"></iframe>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
     <title>WebView Test</title>
     <style>
         body {
@@ -50,4 +73,4 @@
         <button onclick="reloadPage()">Reload Page</button>
     </div>
 </body>
-</html>
+</html> -->
