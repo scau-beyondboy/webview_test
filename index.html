@@ -10,13 +10,13 @@
     function dotest() {
       console.log("test");
       const message = JSON.stringify({
-      type: "func",
-      params: {
-          name: "setWebViewScrollBarVisible",
-          enable: false
-      }
-  });
-  KuCoin.prompt(message);
+                type: "func",
+                params: {
+                    name: "setWebViewScrollBarVisible",
+                    enable: false
+                }
+            });
+      KuCoin.prompt(message);
     }
     function dotest1() {
       console.log("test1111111");
@@ -24,12 +24,8 @@
     dotest();
     setTimeout(dotest1, 600);
   </script>
-  
 </head>
 <body>
-  <div>
-        <button onclick="callAndroidTest()">Test Js Bridge</button>
-    </div>
   <h1>主页面内容</h1>
   <iframe id="myIframe" data-src="https://www.kucoin.plus/zh-hant/pre-market?night=false"></iframe>
 </body>
