@@ -4,21 +4,17 @@
   <title>异步加载iframe</title>
   <script>
     function loadIframe() {
-      var iframe = document.getElementById('myIframe');
-      iframe.src = iframe.getAttribute('data-src');
+      location.href="https://www.kucoin.plus/zh-hant/pre-market?night=false"
     }
     setTimeout(loadIframe,500);
     function dotest() {
-      const message = JSON.stringify({
-                type: "func",
-                params: {
-                    name: "setWebViewScrollBarVisible",
-                    enable: false
-                }
-            });
-            KuCoin.prompt(message);
+      console.log("test");
     }
-    setTimeout(dotest, 1000);
+    function dotest1() {
+      console.log("test1111111");
+    }
+    dotest();
+    setTimeout(dotest1, 600);
 
     function callAndroidTest() {
             const message = JSON.stringify({
