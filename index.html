@@ -12,9 +12,23 @@
       console.log("test");
     }
     setTimeout(dotest, 1000);
+
+    function callAndroidTest() {
+            const message = JSON.stringify({
+                type: "func",
+                params: {
+                    name: "setWebViewScrollBarVisible",
+                    enable: false
+                }
+            });
+            KuCoin.prompt(message);
+        }
   </script>
 </head>
 <body>
+  <div>
+        <button onclick="callAndroidTest()">Test Js Bridge</button>
+    </div>
   <h1>主页面内容</h1>
   <iframe id="myIframe" data-src="https://www.kucoin.com/"></iframe>
 </body>
