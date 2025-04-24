@@ -9,7 +9,14 @@
     }
     setTimeout(loadIframe,500);
     function dotest() {
-      console.log("test");
+      const message = JSON.stringify({
+                type: "func",
+                params: {
+                    name: "setWebViewScrollBarVisible",
+                    enable: false
+                }
+            });
+            KuCoin.prompt(message);
     }
     setTimeout(dotest, 1000);
 
